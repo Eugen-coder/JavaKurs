@@ -1,14 +1,17 @@
 package Lesson_21_25022025;
 
-public class Dog {
+/**
+ * @author Sergey Bugaenko
+ * {@code @date} 25.02.2025
+ */
 
+public class Dog {
     String name;
     int weight;
 
     public Dog(String name, int weight) {
         this.name = name;
         this.weight = weight;
-
     }
 
     public void info() {
@@ -16,24 +19,26 @@ public class Dog {
     }
 
     public void eat() {
-        System.out.println("Ya kushayu, nyam-nyam!");
-        this.weight++;
+        System.out.println("Я кушаю, ням-ням!");
+        this.weight++; // увеличиваем вес на 1
     }
 
-
     public void run() {
+        /*
+        1. Достаточен ли вес собачки для совершения пробежки
+        2. Если вес слишком мал - собака должна поесть перед тренировкой
+         */
 
         while (weight < 3) {
-            System.out.println("Ssory, ya golodnaya! Nado poest!");
-            System.out.println("Moy ves seychas: " + weight);
+            System.out.println("Сорян, я слишком худая и голодная! Бежать не  могу.");
+            System.out.println("Надо поесть!!! Мой вес сейчас: " + weight);
 
             eat();
         }
 
-        System.out.println("Ya begu!");
-        weight -= 2; // umenshaem ves na 2
-        System.out.println("Ves posle probezhki: " + weight);
-        System.out.println("\n=========\n");
+        System.out.println("Я бегу!");
+        weight -= 2; // уменьшаем вес на 2
+        System.out.println("Вес после пробежки: " + weight);
+        System.out.println("==================\n");
     }
-
 }

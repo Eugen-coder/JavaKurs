@@ -1,16 +1,37 @@
 package Lesson_21_25022025;
 
-public class Cat {
+/**
+ * @author Sergey Bugaenko
+ * {@code @date} 25.02.2025
+ */
 
-    String name; // polr klassa
+public class Cat {
+    // характеристики / состояние будущих объектов
+    String name; // поле класса
     String color;
     int age;
 
 
-    public Cat() {
+    /*
+    Конструктор класса
+    Специальный тип метода, который автоматически вызывается при создании нового объекта.
+    Основная задача конструктора - установить начальные свойства объекта (проинициализировать поля)
 
+    Особенности конструктора:
+    1. Имя конструктора совпадает с именем класса
+    2. Конструктор не имеет типа возвращаемого значения. Даже void не указывается
+    (т.к. автоматически возвращает экземпляр класса (объект)
+    3. Конструктор вызывается автоматически при создании объекта
+     */
+
+    // Перегрузка конструктор
+
+    // Конструктор по умолчанию
+    public Cat() {
+        // все поля получают значения по умолчанию для своего типа данных
     }
 
+    // Конструктор - это метод. И я могу передать значения, в тело метода
     public Cat(String catName) {
         name = catName;
     }
@@ -19,35 +40,42 @@ public class Cat {
         name = catName;
         this.color = color;
 
-        // Kluchevoe slovo / this / ispolzuetsya dlya ssilki na tekushiy
-        // Ono pomozhet pri reshenii konfliktov imen poley klassa i parametrov metodov /
+        // Ключевое слово this используется внутри класса для ссылки на текущий объект
+        // Оно поможет при разрешении конфликтов имен полей класса и параметров методов / конструкторов
     }
 
     public Cat(String name, String color, int age) {
-        this(name,color);
+        // this может быть использована для вызова других конструкторов класса
+        // или для передачи текущего объекта в качестве параметра метода (разберем позже)
+        // System.out.println("Строка перед this()");
+        this(name, color); // вызов другого конструктора класса. Должен быть первой строкой исполняемого кода
 
-        this.name = name;
-        this.color = color;
+        // Вызов конструктора, принимающего две String-и
+        // Сначала будет выполнен код соответствующего конструктора
+
+//        this.name = name;
+//        this.color = color;
         this.age = age;
 
     }
 
-    // Povedenie budushix obyektov
+
+
+    // Поведение будущих объектов
     public void sleep() {
-        System.out.println("Ya splu!");
+        System.out.println("Я сплю!");
     }
 
     public void sayMeow() {
         System.out.println("Meow!");
-
     }
 
     public void run() {
-        System.out.println("Ya begu!");
+        System.out.println("Я бегу!");
     }
 
     public void whoAmI() {
-        System.out.printf("Ya kotik %s, vozrast: %d, moy okras %s\n", name, age,color);
+        System.out.printf("Я котик %s, возраст: %d, мой окраса %s\n", name, age, color);
     }
 
 }
