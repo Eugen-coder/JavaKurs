@@ -60,7 +60,7 @@ class Doctor extends Person {
 
 
 // Главный класс
-public class Main {
+public class HW_1_25022025 {
     public static void main(String[] args) {
         Person student = new Student("Иван", 20, "AIT");
         Person teacher = new Teacher("Мария", 35, "Математикy");
