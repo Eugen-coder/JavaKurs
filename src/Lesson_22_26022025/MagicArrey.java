@@ -137,14 +137,14 @@ public class MagicArrey {
     // Udalenie elementa po znacheniyu
     boolean removeByValue(int value){
         // Todo HomeWork
-        return -1;
+        return false;
     }
 
     // Index poslednego vxozhdeniya
     // {1, 100, 5, 100, 24, 0, 100} -> lastIndexOf(100) -> 6
     int lastIndexOf(int value){
        // Todo HomeWork
-        return false;
+        return -1;
     }
 
 
