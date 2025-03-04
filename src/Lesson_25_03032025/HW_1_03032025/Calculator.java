@@ -2,7 +2,17 @@ package Lesson_25_03032025.HW_1_03032025;
 
 public class Calculator {
 
-        static int plus (int a, int b) {
+    /*
+    Poryadok napisaniya:
+    1. Polya klassa, v tom chisle Konstanti
+    2. Bloki inizializazii, esli oni est
+    3. Konstruktori, esli oni est
+    4. Metodi
+     */
+
+    public static final double PI = 3.141519;
+
+    static int plus (int a, int b) {
             return a + b;
         }
 
@@ -23,11 +33,11 @@ public class Calculator {
         }
 
         static double circleCircumference(double radius){
-            return 2 * Math.PI * radius;
+            return 2 * PI * radius;
         }
 
         static double circleArea(double radius){
-            return Math.PI * radius * radius;
+            return PI * radius * radius;
 
         }
 
