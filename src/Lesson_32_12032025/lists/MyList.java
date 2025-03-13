@@ -1,6 +1,6 @@
 package Lesson_32_12032025.lists;
 
-public interface MyList<T> {
+public interface MyList<T> extends Iterable<T>{
 
 
     /**

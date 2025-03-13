@@ -2,6 +2,7 @@ package Lesson_32_12032025.lists;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 /**
@@ -264,6 +265,30 @@ public class MyArrayList<T> implements MyList<T> {
         return result;
     }
 
+    // nevozmozhno vernut obiekt tipa interfeisa.
+
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator();
+    }
+
+    private class MyIterator implements Iterator<T>{
+
+        int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < cursor;
+        }
+
+        @Override
+        public T next() {
+            return array[currentIndex++];
+//            T value = array[currentIndex];
+//            currentIndex++;
+//            return null;
+        }
+    }
 
     public void test() {
         System.out.println(Arrays.toString(array));
