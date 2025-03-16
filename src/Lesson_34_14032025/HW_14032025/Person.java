@@ -1,4 +1,4 @@
-package Lesson_33_13032025.Persons;
+package Lesson_34_14032025.HW_14032025;
 
 public class Person {
     private String email;
